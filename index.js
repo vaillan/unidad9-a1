@@ -1,6 +1,6 @@
 // Import stylesheets
 import './style.css';
-let token = "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"
+let token = "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"
 
 // Write Javascript code!
 let clientXMLHttpRequest = new XMLHttpRequest();
