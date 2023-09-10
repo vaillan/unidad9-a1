@@ -1,10 +1,14 @@
 // Import stylesheets
 import './style.css';
-let token = "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"
-
-// Write Javascript code!
+let token = "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"
 let clientXMLHttpRequest = new XMLHttpRequest();
 
+// Write Javascript code!
+
+/**
+ * Obtien un usuario del repositorio publico de usuarios de github
+ * @returns {void}
+ */
 function getUser() {
   clientXMLHttpRequest.open("GET", "https://api.github.com/users/octocat", true);
   clientXMLHttpRequest.setRequestHeader("Authorization", `Bearer ${token}`);
@@ -18,6 +22,7 @@ function getUser() {
 
 /**
  * Función para mostrar resultado
+ * @param {string}  
  * @return {void}
  */
  function setAlert(value) {
