@@ -11,10 +11,25 @@ function getUser() {
   clientXMLHttpRequest.send();
 
   clientXMLHttpRequest.onreadystatechange = function() {
-    console.log(clientXMLHttpRequest.responseText);
+    setAlert(clientXMLHttpRequest.responseText);
   }
 
 }
+
+/**
+ * Función para mostrar resultado
+ * @return {void}
+ */
+ function setAlert(value) {
+  let alert = document.getElementById('alert');
+  alert.removeAttribute('hidden');
+  alert.innerHTML = `
+  <div class="text-break">
+    ${value}
+  </div>
+  `;
+}
+
 
 getUser();
 
